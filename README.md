@@ -1,4 +1,4 @@
-# Trabalho de 
+# Trabalho de LPA
 1. Loja
 2. Lanchonete
 3. Companhia de Logistica
