@@ -102,9 +102,10 @@ def rotaObjeto(): # Função das rotas do objeto
                                     # transforma as letras em minuscula
         print('-' * 35)
         global rotaOb
+        # Sequencia de if e elife para verificar as rotas
         if rota == 'rs':
-            rs = 1
-            rotaOb = rotaOb + rs
+            rs = 1 # Variavel contadora
+            rotaOb = rotaOb + rs # Variavel para adicionar os dados a paramentro global
             break
         elif rota == 'sr':
             sr = 1
@@ -126,7 +127,7 @@ def rotaObjeto(): # Função das rotas do objeto
             rb = 1.5
             rotaOb = rotaOb + rb
             break
-        else:
+        else: # else para um possivel código errado
             print('Essa rota não existe.\nInsira a rota novamente!')
 dimensoesObejto()
 pesoObjeto()
