@@ -1,6 +1,5 @@
 print('\n')
 print('Bem vindo a Companhia de Logistica Walisson Matheus S.A. RU: 3989950')
-print('-' * 45) # print de alguns hifens para separar as informações
 # Identificador prssoal
 dimenOB = 0 # Variavel contadora das dimensões do objeto
 pesoOB = 0 # Variavel contadora do peso do objeto
@@ -12,6 +11,7 @@ def dimensoesObejto(): # Função das dimensões do objeto
     # Usei esses parametro para habilidar os while
     while altura != 0: # Loop paraa ficar repetindo até que seja digitado um dado valido
         try: 
+            print('-' * 45) # print de alguns hifens para separar as informações
             altura = float(input('Insira a altura do Objeto (em cm): '))
             break
         except:
