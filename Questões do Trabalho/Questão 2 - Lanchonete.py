@@ -45,27 +45,35 @@ def pedidos(): # Função dos pedidos
             ped = int(input('Insira o código do produto desejado: '))
             # Sequencia de if e elif para fazer a separação de cada pedido e a soma do total
             if ped == 100:
+                print('-' * 30) # Adiciona alguns hifens
                 print(f'Produto Selecionado: {desc1} \nValor: {vlr1:.2f} Reais')
                 total+=vlr1 # Parametro total mais o valor do produto
             elif ped == 101:
+                print('-' * 30)
                 print(f'Produto Selecionado: {desc2} \nValor: {vlr2:.2f} Reais')
                 total+=vlr2
             elif ped == 102:
+                print('-' * 30)
                 print(f'Produto Selecionado: {desc3} \nValor: {vlr3:.2f} Reais')
                 total+=vlr3
             elif ped == 103:
+                print('-' * 30)
                 print(f'Produto Selecionado: {desc4} \nValor: {vlr4:.2f} Reais')
                 total+=vlr4
             elif ped == 104:
+                print('-' * 30)
                 print(f'Produto Selecionado: {desc5} \nValor: {vlr5:.2f} Reais')
                 total+=vlr5
             elif ped == 105:
+                print('-' * 30)
                 print(f'Produto Selecionado: {desc6} \nValor: {vlr6:.2f} Reais')
                 total+=vlr6
             elif ped == 200:
+                print('-' * 30)
                 print(f'Produto Selecionado: {desc7} \nValor: {vlr7:.2f} Reais')
                 total+=vlr7
             elif ped == 201:
+                print('-' * 30)
                 print(f'Produto Selecionado: {desc8} \nValor: {vlr8:.2f} Reais')
                 total+=vlr8
             # else para um possivel código inválido
@@ -77,6 +85,7 @@ def pedidos(): # Função dos pedidos
             continue # Se der erro continua no Loop
         while True:
             try:
+                print('-' * 30)
                 print('Deseja pedir novamente?\n1 - Sim\n0 - Não') 
                 cont_ou_sair = int(input('>> '))
                 if cont_ou_sair == 1: # Se inserir 1 continua pedindo
