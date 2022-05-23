@@ -1,6 +1,5 @@
 print('\n')
 print('Bem vindo a Lanchonete do Walisson Matheus RU: 3989950') # Identificador Pessoal
-
 def cardapio(): # Função do Cardápio
     print('|*****************************************************|')
     print('|                     Cardápio                        |')
@@ -15,7 +14,7 @@ def cardapio(): # Função do Cardápio
     print('|   200    |    Refrigerante            |    5,00     |')
     print('|   201    |    Chá Gelado              |    4,00     |')
     print('*******************************************************')
-# Váriavéis com a Descrição dos Produtos
+# Variáveis com a Descrição dos Produtos
 desc1 = 'Cachorro-Quente'
 desc2 = 'Cachorro-Quente Duplo'
 desc3 = 'X-Egg'
@@ -24,7 +23,7 @@ desc5 = 'X-Bacon'
 desc6 = 'X-Tudo'
 desc7 = 'Refrigerante'
 desc8 = 'Chá Gelado'
-# Variavéis com o valor de cada produto
+# Variáveis com o valor de cada produto
 vlr1 = 9.00
 vlr2 = 11.00
 vlr3 = 12.00
@@ -34,20 +33,20 @@ vlr6 = 17.00
 vlr7 = 5.00
 vlr8 = 4.00
 
-total = 0 # Variavél contadora do total que o cliente irá pagar
-pedido = 1 # Varial do  que fiz do pedido para habilitar o (while)
+total = 0 # Variável contadora do total que o cliente irá pagar
+pedido = 1 # Variável do  que fiz do pedido para habilitar o (while)
 def pedidos(): # Função dos pedidos
     global pedido
     global total
-    while True: # Usei while para algum possivel erro 
-        # try/except para um possivel valor não inteiro
+    while True: # Usei while para algum possível erro 
+        # try/except para um possível valor não inteiro
         try:
             ped = int(input('Insira o código do produto desejado: '))
-            # Sequencia de if e elif para fazer a separação de cada pedido e a soma do total
+            # Sequência de if e elif para fazer a separação de cada pedido e a soma do total
             if ped == 100:
                 print('-' * 30) # Adiciona alguns hifens
                 print(f'Produto Selecionado: {desc1} \nValor: {vlr1:.2f} Reais')
-                total+=vlr1 # Parametro total mais o valor do produto
+                total+=vlr1 # Parâmetro total mais o valor do produto
                 break
             elif ped == 101:
                 print('-' * 30)
@@ -84,16 +83,15 @@ def pedidos(): # Função dos pedidos
                 print(f'Produto Selecionado: {desc8} \nValor: {vlr8:.2f} Reais')
                 total+=vlr8
                 break
-            # else para um possivel código inválido
+            # else para um possível código inválido
             else:
                 print('Código Inválido!')
                 continue
         except ValueError: # except ValueError para um valor não inteiro ou se for digitado uma letra
             print('Insira um valor inteiro!')
             continue # Se der erro continua no Loop
-    
-mostrCard = cardapio() # Váriavel para executar a função cardápio
-fazerPed = pedidos() # Váriavel para executar a função pedidos
+mostrCard = cardapio() # Variável para executar a função cardápio
+fazerPed = pedidos() # Variável para executar a função pedidos
 while True: # loop para perguntar se quer continuar pedindo
             try: # try/except para verificar erros
                 print('-' * 30)
