@@ -6,7 +6,7 @@ v_uni = 1 # Usei para habilitar o "while v_uni"
 qtd_prod = 1 # Usei para habilitar o "while qtd_prod"
 
 while v_uni != 0: # Loop para o caso de apresentar erro
-    # Try/Except usado para para evitar um erro se o usuario digitar um valor não númerico
+    # Try/Except usado para evitar um erro se o usuário digitar um valor não numérico
     try:
         v_unit = float(input('Insira o valor unitário do produto: '))
         if v_unit > 0: # Se digitar um valor maior que Zero continua    
@@ -15,29 +15,29 @@ while v_uni != 0: # Loop para o caso de apresentar erro
             print('Insira um valor maior!') # Mensagem que informa o erro
             continue # Função usada para continuar o Loop
     except ValueError: 
-        print('Insira um valor númerico!')
-        continue # Se inserir um valor não númerico informa erro e repete a pergunta
+        print('Insira um valor numérico!')
+        continue # Se inserir um valor não numérico informa erro e repete a pergunta
 
 while qtd_prod != 0: # Loop para o caso de apresentar erro
-    # Try/Except usado para para evitar um erro se o usuario inserir letras
+    # Try/Except usado para evitar um erro se o usuário inserir letras
     try:
-        qtd_p = int(input('Insira a quantidado: '))
-        v_sem_desc = v_unit * qtd_p # Função para fazer o calculo do valor sem desconto
+        qtd_p = int(input('Insira a quantidade: '))
+        v_sem_desc = v_unit * qtd_p # Função para fazer o cálculo do valor sem desconto
 
         if qtd_p <= 0: # Se digitar um valor menor ou igual a Zero repete a pergunta
             print('Insira uma quantidade maior!')
-            continue # Fução para refazer a pergunta
+            continue # Função para refazer a pergunta
 
-# Sequencia de elif para fazer a diferenciação dos descontos
+# Sequência de elif para fazer a diferenciação dos descontos
         elif qtd_p <= 9:
             print(f'Valor sem desconto: {v_sem_desc:.2f} Reais')
             print('Para essa quantidade não oferecemos desconto')
-        # Parametro para quantidade menor que ou igual a 9
+        # Parâmetro para quantidade menor que ou igual a 9
         elif qtd_p >= 10 and qtd_p <= 99:
             # and para verificar se está entre o intervalo de 10 até 99
             print(f'Valor sem desconto: {v_sem_desc:.2f} Reais')
-            desc_5 = (5 * v_sem_desc) / 100 # Calculo do desconto
-            v_com_desc = v_sem_desc - desc_5 # Calculo para inserir o desconto
+            desc_5 = (5 * v_sem_desc) / 100 # Cálculo do desconto
+            v_com_desc = v_sem_desc - desc_5 # Cálculo para inserir o desconto
             print(f'Valor com desconto: {v_com_desc:.2f} Reais (Desconto de 5%)')
         elif qtd_p >= 100 and qtd_p <= 999:
             print(f'Valor sem desconto: {v_sem_desc:.2f} Reais')
@@ -49,8 +49,8 @@ while qtd_prod != 0: # Loop para o caso de apresentar erro
             desc_15 = (15 * v_sem_desc) / 100 
             v_com_desc = v_sem_desc - desc_15
             print(f'Valor com desconto: {v_com_desc:.2f} Reais (Desconto de 15%)')
-        break # break para encerar o rpograma
+        break # break para encerar o programa
     except ValueError: # except para evitar erro
-        print('Insira uma quantidade númerica!')
+        print('Insira uma quantidade numérica!')
         continue # Se houver erro repete a pergunta
 print('\n')
