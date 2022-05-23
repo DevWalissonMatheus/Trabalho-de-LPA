@@ -91,3 +91,4 @@ def pedidos(): # Função dos pedidos
                 print('Código invalido!\nTente novamente.')
 mostrCard = cardapio() # Váriavel para executar a função cardápio
 fazerPed = pedidos() # Váriavel para executar a função pedidos
+print('\n')
