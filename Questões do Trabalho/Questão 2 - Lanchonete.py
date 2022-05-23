@@ -86,10 +86,9 @@ def pedidos(): # Função dos pedidos
                 pedidos()  
             elif cont_ou_sair == 0: # Se digitar 0 mostra o valor total a ser pago e encerra o programa
                 print(f'O valor total a ser pago é: {total:.2f} Reais\n')
-                break
             else: # else para um possivel código errado
                 print('Código invalido!\nTente novamente.')
-        break # break para encerrar o whilw principal
+            break # break para encerrar o whilw principal
 mostrCard = cardapio() # Váriavel para executar a função cardápio
 fazerPed = pedidos() # Váriavel para executar a função pedidos
 print('\n')
