@@ -79,16 +79,17 @@ def pedidos(): # Função dos pedidos
             try:
                 print('Deseja pedir novamente?\n1 - Sim\n0 - Não') 
                 cont_ou_sair = int(input('>> '))
+                if cont_ou_sair == 1: # Se inserir 1 continua pedindo
+                    pedidos()  
+                elif cont_ou_sair == 0: # Se digitar 0 mostra o valor total a ser pago e encerra o programa
+                    print(f'O valor total a ser pago é: {total:.2f} Reais\n')
+                    break # break para encerrar o programa
+                else: # else para um possivel código errado
+                    print('Código invalido!\nTente novamente.')
+                    continue # continua o loop em caso de código errado
             except ValueError:
                 print('Insira um valor inteiro!')
                 continue  
-            if cont_ou_sair == 1: # Se inserir 1 continua pedindo
-                pedidos()  
-            elif cont_ou_sair == 0: # Se digitar 0 mostra o valor total a ser pago e encerra o programa
-                print(f'O valor total a ser pago é: {total:.2f} Reais\n')
-            else: # else para um possivel código errado
-                print('Código invalido!\nTente novamente.')
-            break # break para encerrar o whilw principal
 mostrCard = cardapio() # Váriavel para executar a função cardápio
 fazerPed = pedidos() # Váriavel para executar a função pedidos
 print('\n')
