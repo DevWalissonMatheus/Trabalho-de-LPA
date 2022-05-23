@@ -10,7 +10,7 @@ def cadastrarPeca(codigo): # Função de cadastramento de peça
     while True:
         # while e try/except para verificar possiveis erros
         try:
-            valor = int(input('Insira o Valor da peça: '))
+            valor = float(input('Insira o Valor da peça: '))
             dicPeca = {'Codigo' : codigo,
                         'Nome' : nome,
                         'Fabricante' : facric,
@@ -71,6 +71,7 @@ def removerPeca(): # Função para remover peças
                     l_pecas.remove(peca) # E faz a remoção
         except ValueError:
             print('Insira Um Valor Inteiro!')
+        break # Enserra a função
 
 cod = 0 # Variavel contadora do código da peça
 l_pecas = [] # Lista de peças
