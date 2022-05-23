@@ -1,5 +1,5 @@
 print('\n')
-print('Bem vindo a Companhia de Logistica Walisson Matheus S.A. RU: 3989950')
+print('Bem vindo a Companhia de Logística Walisson Matheus S.A. RU: 3989950')
 # Identificador pessoal
 dimenOB = 0 # Variável contadora das dimensões do objeto
 pesoOB = 0 # Variável contadora do peso do objeto
@@ -8,7 +8,7 @@ def dimensoesObejto(): # Função das dimensões do objeto
     altura = 1 
     comprimento = 1
     largura = 1
-    # Usei esses parâmetro para habilitar os while
+    # Usei esse parâmetro para habilitar os while
     while altura != 0: # Loop para ficar repetindo até que seja digitado 
                        #um dado valido
         try: 
@@ -29,11 +29,11 @@ def dimensoesObejto(): # Função das dimensões do objeto
         try:
             largura = float(input('Insira a largura do Objeto (em cm): '))
             volume = altura * comprimento * largura
-            # Variavel para fazer o calculo da dimensão do objeto
+            # Variável para fazer o cálculo da dimensão do objeto
             print('O volume do objeto é: ', volume)
             print('-' * 38)
             global dimenOB # Variável para tornar esse parâmetro global
-            # Sequencia de if e elif para fazer a verificação dos dados
+            # Sequência de if e elif para fazer a verificação dos dados
             # E retornar os dados para a dimensão global
             if volume <= 1000:
                 valor1 = 10 # Variável com o valor até essa dimensão
@@ -105,7 +105,7 @@ def rotaObjeto(): # Função das rotas do objeto
                                     # maiúsculo transforma as letras em minúscula
         print('-' * 35)
         global rotaOb
-        # Sequencia de if e elife para verificar as rotas
+        # Sequência de if e elif para verificar as rotas
         if rota == 'rs':
             rs = 1 # Variavel contadora
             rotaOb = rotaOb + rs # Variável para adicionar os dados a 
