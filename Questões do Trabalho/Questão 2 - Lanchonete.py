@@ -89,6 +89,7 @@ def pedidos(): # Função dos pedidos
                 break
             else: # else para um possivel código errado
                 print('Código invalido!\nTente novamente.')
+        break # break para encerrar o whilw principal
 mostrCard = cardapio() # Váriavel para executar a função cardápio
 fazerPed = pedidos() # Váriavel para executar a função pedidos
 print('\n')
