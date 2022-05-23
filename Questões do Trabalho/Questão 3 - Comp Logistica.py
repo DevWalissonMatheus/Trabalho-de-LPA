@@ -1,6 +1,6 @@
 print('\n')
 print('Bem vindo a Companhia de Logistica Walisson Matheus S.A. RU: 3989950')
-print('-' * 45)
+print('-' * 45) # print de alguns hifens para separar as informações
 # Identificador prssoal
 dimenOB = 0 # Variavel contadora das dimensões do objeto
 pesoOB = 0 # Variavel contadora do peso do objeto
