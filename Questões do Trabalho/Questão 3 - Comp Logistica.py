@@ -1,5 +1,6 @@
 print('\n')
 print('Bem vindo a Companhia de Logistica Walisson Matheus S.A. RU: 3989950')
+print('-' * 45)
 # Identificador prssoal
 dimenOB = 0 # Variavel contadora das dimensões do objeto
 pesoOB = 0 # Variavel contadora do peso do objeto
@@ -29,6 +30,7 @@ def dimensoesObejto(): # Função das dimensões do objeto
             volume = altura * comprimento * largura
             # Variavel para fazer o calculo da dimensão do objeto
             print('O volume do objeto é: ', volume)
+            print('-' * 38)
             global dimenOB # Variavel para tornar esse parametro global
             # Sequencia de if e elif para fazer a verificação dos dados
             # E retornar os dados para a dimensão global
@@ -62,6 +64,7 @@ def pesoObjeto(): # Função do peso do objeto
         # try/except para verificar possiveis erros  
         try:
             peso = float(input('Insira o peso do objeto (em kg): '))
+            print('-' * 40)
             global pesoOB
             # Sequencia de if e elif para fazer a verificação dos dados
             # E atribuir o resultado à variavel global
@@ -97,6 +100,7 @@ def rotaObjeto(): # Função das rotas do objeto
         rota = input('>> ').lower() # lower para verificar se o dado foi digitado
                                     # em letra minuscula, caso seja digitada em maiusculo
                                     # transforma as letras em minuscula
+        print('-' * 35)
         global rotaOb
         if rota == 'rs':
             rs = 1
@@ -128,5 +132,5 @@ dimensoesObejto()
 pesoObjeto()
 rotaObjeto()
 vlrDPR = dimenOB * pesoOB * rotaOb # Variavel para fazer o calculo do valor a ser pago
-print(f'O valor a ser pago é: {vlrDPR:.2f} Reais (Dimensões: {dimenOB} * Peso: {pesoOB} * Rota: {rotaOb})')
+print(f'O valor a ser pago é: {vlrDPR:.2f} Reais\n(Dimensões: {dimenOB} * Peso: {pesoOB} * Rota: {rotaOb})')
 print('\n')

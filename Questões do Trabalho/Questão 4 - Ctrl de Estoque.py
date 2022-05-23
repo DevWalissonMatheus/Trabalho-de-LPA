@@ -1,8 +1,8 @@
 print('\n')
 print('Bem vindo ao Controle de Estoque da Bicicletaria do Walisson Matheus RU: 3989950')
-
-def cadastrarPeca(codigo):
-    print('-' * 30)
+# Identificador pessoal
+def cadastrarPeca(codigo): # Função de cadastramento de peça
+    print('-' * 30) # print de alguns hifens para separar as informações
     print('Você escolheu a opção Cadastrar Peça.')
     print('Código da peça {}'.format(codigo))
     nome = input('Insira o Nome da peça: ')
