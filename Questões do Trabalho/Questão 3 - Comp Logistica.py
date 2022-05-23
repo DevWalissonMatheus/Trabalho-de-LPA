@@ -1,28 +1,29 @@
 print('\n')
 print('Bem vindo a Companhia de Logistica Walisson Matheus S.A. RU: 3989950')
-# Identificador prssoal
-dimenOB = 0 # Variavel contadora das dimensões do objeto
-pesoOB = 0 # Variavel contadora do peso do objeto
-rotaOb = 0 # Variavel contadora da rota do objeto
+# Identificador pessoal
+dimenOB = 0 # Variável contadora das dimensões do objeto
+pesoOB = 0 # Variável contadora do peso do objeto
+rotaOb = 0 # Variável contadora da rota do objeto
 def dimensoesObejto(): # Função das dimensões do objeto
     altura = 1 
     comprimento = 1
     largura = 1
-    # Usei esses parametro para habilidar os while
-    while altura != 0: # Loop paraa ficar repetindo até que seja digitado um dado valido
+    # Usei esses parâmetro para habilitar os while
+    while altura != 0: # Loop para ficar repetindo até que seja digitado 
+                       #um dado valido
         try: 
             print('-' * 45) # print de alguns hifens para separar as informações
             altura = float(input('Insira a altura do Objeto (em cm): '))
             break
         except:
-            print('ERRO! Insira um valor númerico.')
+            print('ERRO! Insira um valor numérico.')
         # try/except para verificar se foi digitado um dado inválido
     while comprimento != 0:
         try:
             comprimento = float(input('Insira o comprimento do Objeto (em cm): '))
             break
         except:
-            print('ERRO! Insira um valor númerico.')
+            print('ERRO! Insira um valor numérico.')
         # try/except para verificar se foi digitado um dado inválido
     while largura != 0:
         try:
@@ -31,12 +32,13 @@ def dimensoesObejto(): # Função das dimensões do objeto
             # Variavel para fazer o calculo da dimensão do objeto
             print('O volume do objeto é: ', volume)
             print('-' * 38)
-            global dimenOB # Variavel para tornar esse parametro global
+            global dimenOB # Variável para tornar esse parâmetro global
             # Sequencia de if e elif para fazer a verificação dos dados
             # E retornar os dados para a dimensão global
             if volume <= 1000:
-                valor1 = 10 # Variavel com o valor até essa dimensão
-                dimenOB = dimenOB + valor1 # Variavel para fazer a atribuição dos dados
+                valor1 = 10 # Variável com o valor até essa dimensão
+                dimenOB = dimenOB + valor1 # Variável para fazer a 
+                                           #atribuição dos dados
                 break
             elif volume >= 1001 and volume <= 10000:
                 valor2 = 20
@@ -50,24 +52,25 @@ def dimensoesObejto(): # Função das dimensões do objeto
                 valor4 = 50
                 dimenOB = dimenOB + valor4
                 break
-            # elif para informar que essa diemnsão não é aceita e tentar novamente
+            # elif para informar que essa dimensão não é aceita e 
+            # tentar novamente
             elif volume > 100000:
                 print('Não aceitamos objetos com as dimensões tão grandes.')
                 print('Insira as informações novamente.')
                 dimensoesObejto()
                 break
         except:
-            print('ERRO! Insira um valor númerico.')
+            print('ERRO! Insira um valor numérico.')
         # try/except para verificar se foi digitado um dado inválido
 def pesoObjeto(): # Função do peso do objeto
     while True:
-        # try/except para verificar possiveis erros  
+        # try/except para verificar possíveis erros  
         try:
             peso = float(input('Insira o peso do objeto (em kg): '))
             print('-' * 40)
             global pesoOB
-            # Sequencia de if e elif para fazer a verificação dos dados
-            # E atribuir o resultado à variavel global
+            # Sequência de if e elif para fazer a verificação dos dados
+            # E atribuir o resultado à variável global
             if peso <= 0.1:
                 mult1 = 1
                 pesoOB = pesoOB + mult1
@@ -90,7 +93,7 @@ def pesoObjeto(): # Função do peso do objeto
                 pesoObjeto()
                 break
         except ValueError:
-            print('ERRO! Insira um valor númerico.')
+            print('ERRO! Insira um valor numérico.')
 def rotaObjeto(): # Função das rotas do objeto
     while True:
         print('Selecione a rota:\nRS - De Rio de Janeiro até São Paulo\n'
@@ -98,14 +101,15 @@ def rotaObjeto(): # Função das rotas do objeto
         'SB - De São Paulo até Brasília\nBR - De Brasília até Rio de Janeiro\n'
         'RB - Rio de Janeiro até Brasília')
         rota = input('>> ').lower() # lower para verificar se o dado foi digitado
-                                    # em letra minuscula, caso seja digitada em maiusculo
-                                    # transforma as letras em minuscula
+                                    # em letra minúscula, caso seja digitada em 
+                                    # maiúsculo transforma as letras em minúscula
         print('-' * 35)
         global rotaOb
         # Sequencia de if e elife para verificar as rotas
         if rota == 'rs':
             rs = 1 # Variavel contadora
-            rotaOb = rotaOb + rs # Variavel para adicionar os dados a paramentro global
+            rotaOb = rotaOb + rs # Variável para adicionar os dados a 
+                                 # parâmetro global
             break
         elif rota == 'sr':
             sr = 1
@@ -127,11 +131,13 @@ def rotaObjeto(): # Função das rotas do objeto
             rb = 1.5
             rotaOb = rotaOb + rb
             break
-        else: # else para um possivel código errado
+        else: # else para um possível código errado
             print('Essa rota não existe.\nInsira a rota novamente!')
 dimensoesObejto()
 pesoObjeto()
 rotaObjeto()
-vlrDPR = dimenOB * pesoOB * rotaOb # Variavel para fazer o calculo do valor a ser pago
-print(f'O valor a ser pago é: {vlrDPR:.2f} Reais\n(Dimensões: {dimenOB} * Peso: {pesoOB} * Rota: {rotaOb})')
+vlrDPR = dimenOB * pesoOB * rotaOb # Variável para fazer o cálculo do valor 
+                                   # a ser pago
+print(f'O valor a ser pago é: {vlrDPR:.2f} Reais'
+     f'(Dimensões: {dimenOB} * Peso: {pesoOB} * Rota: {rotaOb})')
 print('\n')
